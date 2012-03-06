@@ -18,10 +18,9 @@ The configuration file is : plugins/NuxBank/config.yml
 Example :
 
 url: mysql://host:port/dbname
-
 user: username
-
 passwd: userpass
+maxhomes: 5
 
 Permissions' nodes
 ------------------
