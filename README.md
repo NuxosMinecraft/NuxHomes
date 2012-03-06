@@ -1,4 +1,4 @@
-NuxBank
+NuxHomes
 ========
 
 An home plugin, to go back faster at home !
