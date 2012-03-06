@@ -1,0 +1,90 @@
+name: NuxHomes
+version: 1.0
+author: N4th4
+main: net.n4th4.bukkit.nuxhomes.NuxHomes
+depend: [Spout]
+
+commands:
+    home:
+        description: Go to the home.
+        usage: |
+          /<command> <player> [name]
+          Example: /<command> City - Go to the home with the name "City"
+    homedelete:
+        description: Delete the home.
+        usage: |
+          /<command> <player> [name]
+          Example: /<command> City - Delete the home with the name "City"
+    homelist:
+        description: List the home.
+        usage: |
+          /<command> [player]
+          Example: /<command> Notch - List Notch's homes
+    homeset:
+        description: Set your home.
+        usage: |
+          /<command> <player> [name]
+          Example: /<command> City - Set a home with the name "City"
+    
+          
+permissions:
+    nuxhomes.*:
+        description: Gives access to all NuxHomes commands
+        children:
+            nuxhomes.basic.*: true
+            nuxhomes.multi.*: true
+            nuxhomes.others.*: true
+    nuxhomes.basic.*:
+        description: Gives access to all NuxHomes commands  for basic use
+        children:
+            nuxhomes.basic.go: true
+            nuxhomes.basic.delete: true
+            nuxhomes.basic.set: true
+    nuxhomes.multi.*:
+        description: Gives access to all NuxHomes commands for multihomes use
+        children:
+            nuxhomes.multi.go: true
+            nuxhomes.multi.delete: true
+            nuxhomes.multi.list: true
+            nuxhomes.multi.set: true
+    nuxhomes.others.*:
+        description: Gives access to all NuxHomes commands for "go to others" use
+        children:
+            nuxhomes.others.go: true
+            nuxhomes.others.delete: true
+            nuxhomes.others.list: true
+            nuxhomes.others.set: true
+    nuxhomes.basic.go:
+        description: Allows to go to your default home
+        default: op
+    nuxhomes.basic.delete:
+        description: Allows to delete your default home
+        default: op
+    nuxhomes.basic.set:
+        description: Allows to set your default home
+        default: op
+    nuxhomes.multi.go:
+        description: Allows to go to all your homes
+        default: op
+    nuxhomes.multi.delete:
+        description: Allows to delete all your homes
+        default: op
+    nuxhomes.multi.list:
+        description: Allows to list your homes
+        default: op
+    nuxhomes.multi.set:
+        description: Allows to set all your home
+        default: op
+    nuxhomes.others.go:
+        description: Allows to go to others' homes
+        default: op
+    nuxhomes.others.delete:
+        description: Allows to delete other's home
+        default: op
+    nuxhomes.others.list:
+        description: Allows list others' homes
+        default: op
+    nuxhomes.others.set:
+        description: Allows to set others' home
+        default: op
+       
